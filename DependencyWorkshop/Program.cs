@@ -19,6 +19,7 @@ namespace DependencyWorkshop
             IStudentDataAccess studentRepository = new StudentDataAccess();
             IStudentBusinessLogic _studentLogic = new StudentBusinessLogic(studentRepository);
 
+
             string command = "";
             while (command != "EXIT")
             {
@@ -42,6 +43,8 @@ namespace DependencyWorkshop
                         Console.WriteLine("Unknown command!");
                         break;
                 }
+
+                Console.WriteLine(_studentLogic.AddStudentReturnUppercase(commandArguments[1]));
             }
 
             Console.WriteLine("Done!");

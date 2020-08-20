@@ -20,9 +20,25 @@ namespace BusinessLogic
         {
             _studentRepository = studentRepository;
         }
+
+        public string AddStudentReturnUppercase(string studentName)
+        {
+            if (studentName == "Alex")
+            {
+                _studentRepository.AddStudent(studentName);
+            }
+            else
+            {
+                _studentRepository.ListStudents();
+            }
+
+            return studentName.ToUpper();
+        }
+
         public void AddStudent(string student)
         {
             _studentRepository.AddStudent(student);
+
         }
         public void ListStudents()
         {

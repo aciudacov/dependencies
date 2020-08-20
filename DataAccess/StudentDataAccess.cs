@@ -21,6 +21,11 @@ namespace DataAccess
             Students.Add(student);
         }
 
+        public void AddStudent(int studentNr)
+        {
+            //Students.Add(student);
+        }
+
         public void ListStudents()
         {
             foreach (var student in Students)
