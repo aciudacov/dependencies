@@ -1,8 +1,11 @@
-﻿namespace DataAccess
+﻿using System.Collections.Generic;
+
+namespace DataAccess
 {
     public interface IStudentDataAccess
     {
         void AddStudent(string student);
-        void ListStudents();
+        IEnumerable<string> ListStudents();
+        int GetMark(string studentName, string subjectName);
     }
 }

@@ -1,8 +1,8 @@
-﻿namespace BusinessLogic
+﻿namespace BusinessLogic.Students
 {
     public interface IStudentBusinessLogic
     {
-        string AddStudentReturnUppercase(string studentName);
+        string BadMethodWhichDoMillionOfThings(string studentName);
 
         void AddStudent(string student);
         void ListStudents();

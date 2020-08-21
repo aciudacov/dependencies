@@ -1,5 +1,5 @@
 ﻿using System;
-using BusinessLogic;
+using BusinessLogic.Students;
 using DataAccess;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -18,7 +18,7 @@ namespace BusinessLogicUnitTests
             var expectedStudent = "ALEX";
 
             //Act
-            var result = _studentLogic.AddStudentReturnUppercase(studentParam);
+            var result = _studentLogic.BadMethodWhichDoMillionOfThings(studentParam);
 
             //Assert
             Assert.AreEqual(expectedStudent, result);

@@ -15,9 +15,15 @@ namespace DataAccess
             Console.WriteLine("I am not adding student to list.");
         }
 
-        public void ListStudents()
+        public IEnumerable<string> ListStudents()
         {
             Console.WriteLine("There is no list.");
+            return new List<string> { "Bob", "Jhon", "Ivan" };
+        }
+
+        public int GetMark(string studentName)
+        {
+            return 10;
         }
     }
 }

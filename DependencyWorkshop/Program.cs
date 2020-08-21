@@ -1,4 +1,4 @@
-﻿using BusinessLogic;
+﻿using BusinessLogic.Students;
 using DataAccess;
 using System;
 using System.Collections.Generic;
@@ -44,7 +44,7 @@ namespace DependencyWorkshop
                         break;
                 }
 
-                Console.WriteLine(_studentLogic.AddStudentReturnUppercase(commandArguments[1]));
+                Console.WriteLine(_studentLogic.BadMethodWhichDoMillionOfThings(commandArguments[1]));
             }
 
             Console.WriteLine("Done!");
