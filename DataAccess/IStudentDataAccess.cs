@@ -4,8 +4,9 @@ namespace DataAccess
 {
     public interface IStudentDataAccess
     {
-        void AddStudent(string student);
-        IEnumerable<string> ListStudents();
+        void AddStudent(Student student);
+        void UpdateStudent(Student student);
+        IEnumerable<Student> ListStudents();
         int GetMark(string studentName, string subjectName);
     }
 }

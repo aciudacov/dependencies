@@ -1,5 +1,6 @@
 ﻿using DataAccess;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace BusinessLogic.Students
@@ -36,11 +37,40 @@ namespace BusinessLogic.Students
 
         /// <summary>
         /// Looks for a student among all students in memory DB with highest grade for provided subject
+        /// Do not add new methods in repository layer (data layer)! use those you already have
         /// </summary>
         /// <returns></returns>
-        public int GetStudentWithHighestMark(string subjectName)
+        public IEnumerable<Student> GetStudentsWithHighestMark(string subjectName)
+        {
+            //var allStudents = ListStudents()
+            //foreach(student)
+            //{
+            //    GetMark()
+            //}
+            //if highest()
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Logic:
+        /// 1. Base positive scenario - adds new subjecect with Grade "0" to AssignedSubjects and updates student, so that change would be saved. Let's pretend that you have in-DB database and only way to save
+        /// cahnged subject is to call StudentDataAccess.UpdateStudent();
+        /// 2. If student is group leader, the Name of assigned subject should be in UPPERCASE
+        /// 3. If student aldready have same subject (by name) in his FinishedSubjects - thow a custom "SubjectAlreadyFinished" exception with message "{Student.Name} has aldready finished {Subject.Name} with mark {Subject.Mark}"
+        /// </summary>
+        public void AssignStudentToSubject(string student, string subject)
         {
 
+        }
+
+        public void AddStudent(string student)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ListStudents()
+        {
+            throw new NotImplementedException();
         }
 
         //public string AddStudentReturnUppercase(string studentName)
@@ -56,17 +86,5 @@ namespace BusinessLogic.Students
 
         //    return studentName.ToUpper();
         //}
-
-        public void AddStudent(string student)
-        {
-            _studentRepository.AddStudent(student);
-
-        }
-        public void ListStudents()
-        {
-            _studentRepository.ListStudents();
-        }
-
-
     }
 }
